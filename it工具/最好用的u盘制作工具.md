@@ -7,3 +7,5 @@ apple上制作windows10
 > 工具如下：
 > > https://twocanoes.com/using-larger-windows-10-isos-with-boot-camp-assistant/
 > 只需要把win镜像拖入这个工具，然后再把内容复制到u盘即可
+> 参考文章：
+> > https://zhuanlan.zhihu.com/p/273305963
