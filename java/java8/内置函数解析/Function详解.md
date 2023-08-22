@@ -93,3 +93,56 @@ Function<Person, Integer> composedFunction = getName.andThen(toUpperCase).andThe
 ```
 
 并且最终的函数内容为:`Function<Person, Integer>`,也就是输入一个`Pershon`类，最后得到一个`Integer`类型。
+
+## 额外的讨论话题
+
+还记得`Function<? super V, ? extends T> before`这其中的`? super V`用来做什么吗？其实这句话的意思就是
+
+也就是说可以把入参看做是V，而函数中定义的范型呢作为？。比如People是Person的父类，并且函数为：`Function<People, String> getName = People::getAge;`；那么入参为Person类对象是可以的。代码如下：
+
+```java
+public class People {
+    private String age="123";
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+}
+```
+
+```java
+public class Person extends People{// 注意这里继承了People类
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
+    public static void main(String[] args) {
+      	// 这里是People类，而People类是Person类的父类
+        Function<People, String> getName = People::getAge;
+        Function<String, String> toUpperCase = String::toUpperCase;
+        Function<String, Integer> getLength = String::length;
+
+        Function<People, Integer> composedFunction = getName.andThen(toUpperCase).andThen(getLength);
+				
+        // 注意这里是person类
+        Person person = new Person("Alice", 30);
+        int result = composedFunction.apply(person);
+
+        System.out.println("Name: " + person.getName() + " -> Uppercase Length: " + result);
+    }
+}
+```
+
+> 不过需要注意的是，一般显示使用中不会这样父类和子类混合使用，都是使用同一个类来做的。那样的话更好理解。
