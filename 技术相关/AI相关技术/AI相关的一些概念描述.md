@@ -10,7 +10,7 @@ https://www.deeplearning.ai/resources/generative-ai-courses-guide/
 
 > Retrieval Augmented Generation(增强式检索);现在常用的是对文档的检索。
 
-## RAG的流程
+### RAG的流程
 
 RAG的执行过程通常由两部分组成：
 
@@ -32,3 +32,12 @@ RAG的执行过程通常由两部分组成：
 >   - Retrieval: The stored and query vectors represent meaning, so retrieval is the process of finding the k entries in the database that are ‘closest’ to the query vector. Lots of details here!
 >   - k results are provided to an LLM which uses them to form an ‘augmented’ response.
 
+## Hugging Face
+
+> Hugging Face Hub is an open platform that hosts models,datasets, and machine learning demos that are called Hugging Face Spaces.
+
+
+
+
+
+## Transformer
