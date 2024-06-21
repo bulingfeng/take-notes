@@ -41,3 +41,72 @@ RAG的执行过程通常由两部分组成：
 
 
 ## Transformer
+
+
+
+## Different between machine learning, Natural Language Processing, and Neural Network.
+
+Large Language Models (LLMs) like GPT-3, which powers ChatGPT, leverage several advanced technologies from the fields of machine learning, natural language processing, and neural networks. Below is an explanation of how these technologies are utilized:
+
+#### Machine Learning (ML)
+
+**Definition:** LLMs are fundamentally machine learning models that learn from vast amounts of text data to understand and generate human language.
+
+**Key Techniques:**
+
+- **Supervised Learning:** While LLMs are primarily trained in an unsupervised fashion, fine-tuning them for specific tasks often involves supervised learning using labeled datasets.
+- **Unsupervised Learning:** The training process typically starts with unsupervised learning where the model learns patterns and structures in the text data without explicit labels.
+
+#### Natural Language Processing (NLP)
+
+**Definition:** LLMs are designed to handle a variety of NLP tasks, making them capable of understanding and generating human language.
+
+**Key Techniques:**
+
+- **Tokenization:** The text input is broken down into tokens, which can be words or subwords, for the model to process.
+- **Word Embeddings:** Words are converted into numerical vectors that capture their meanings and relationships.
+- **Attention Mechanisms:** Particularly the Transformer architecture, which uses self-attention to weigh the importance of different words in a sentence.
+- **Language Modeling:** Predicting the next word in a sequence, which is fundamental to generating coherent text.
+
+#### Neural Networks
+
+**Definition:** LLMs like GPT-3 are based on deep neural networks, specifically the Transformer architecture, which has proven highly effective for NLP tasks.
+
+**Key Components:**
+
+- Transformer Architecture:
+
+   
+
+  Consists of layers of self-attention mechanisms and feedforward neural networks.
+
+  - **Self-Attention:** Allows the model to consider the context of each word in relation to others in a sentence, enabling it to capture long-range dependencies.
+  - **Feedforward Neural Networks:** Applied after the self-attention mechanism to transform the data further.
+
+- **Layers:** GPT-3, for example, uses 96 layers in its largest version, allowing it to learn complex patterns and representations.
+
+- Training Process:
+
+  - **Pretraining:** The model is initially trained on a large corpus of text to learn general language patterns.
+  - **Fine-Tuning:** Optionally, the pretrained model can be fine-tuned on specific datasets to improve performance on particular tasks.
+
+### Summary
+
+In essence, LLMs like GPT-3 integrate advances from all three domains:
+
+| Feature                         | Utilization in LLMs (e.g., GPT-3)                            |
+| ------------------------------- | ------------------------------------------------------------ |
+| **Machine Learning**            | Uses both unsupervised learning (pretraining) and supervised learning (fine-tuning). |
+| **Natural Language Processing** | Tokenization, word embeddings, attention mechanisms, and language modeling are core techniques. |
+| **Neural Networks**             | Built on the Transformer architecture, employing self-attention and feedforward layers. |
+
+### Conclusion
+
+Large Language Models such as GPT-3 employ:
+
+- **Machine Learning** techniques to learn from data.
+- **NLP** methods to understand and generate human language.
+- **Neural Networks**, particularly the Transformer architecture, to effectively model complex language patterns.
+
+This combination enables LLMs to perform a wide array of tasks, from answering questions and generating text to translation and summarization, making them incredibly versatile and powerful tools in the field of artificial intelligence.
+
